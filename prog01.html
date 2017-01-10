@@ -1,12 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
 		<title>calculate Change</title>
 		<script>
-			var b = 0
-			var m = prompt ("Veuillez entré une somme.");
-				
+			var billets = 0;
+			window.onload = callprompt();
+			function callprompt() {
+				var pmoney = prompt ("Veuillez entrer une somme.");
+				if (pmoney != null) {
+					if (pmoney >= 5) {
+						b500 = pmoney / 500;
+						pmoney = pmoney - (b500 * 500);
+						b200 = pmoney / 200;
+						pmoney = pmoney - (b200 * 200);
+						b100 = pmoney / 100;
+						pmoney = pmoney - (b100 * 100);
+						b50 = pmoney / 50;
+						pmoney = pmoney - (b50 * 50);
+						b20 = pmoney / 20;
+						pmoney = pmoney - (b20 * 20);
+						b10 = pmoney / 10;
+						pmoney = pmoney - (b10 * 10);
+						b5 = pmoney / 5;
+						pmoney = pmoney - (b5 * 5);
+						document.write( " Billets de 500: " + b500 + " Billets de 200: " + b200 + " Billets de 100: " + b100 + " Billets de 50: " + b50 + " Billets de 20: " + b20 + " Billets de 10: " + b10 + " Billets de 5: " + b5 + " " + "Il reste: " + pmoney + " euro")
+					}
+					else {
+						document.write("Cannot compute.");
+					}
+					}
+			}
 		</script>
 	</head>
 	<body>
