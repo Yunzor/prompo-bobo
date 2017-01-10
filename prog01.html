@@ -9,22 +9,57 @@
 			function callprompt() {
 				var pmoney = prompt ("Veuillez entrer une somme.");
 				if (pmoney != null) {
-					if (pmoney >= 5) {
-						b500 = pmoney / 500;
-						pmoney = pmoney - (b500 * 500);
-						b200 = pmoney / 200;
-						pmoney = pmoney - (b200 * 200);
-						b100 = pmoney / 100;
-						pmoney = pmoney - (b100 * 100);
-						b50 = pmoney / 50;
-						pmoney = pmoney - (b50 * 50);
-						b20 = pmoney / 20;
-						pmoney = pmoney - (b20 * 20);
-						b10 = pmoney / 10;
-						pmoney = pmoney - (b10 * 10);
-						b5 = pmoney / 5;
-						pmoney = pmoney - (b5 * 5);
-						document.write( " Billets de 500: " + b500 + " Billets de 200: " + b200 + " Billets de 100: " + b100 + " Billets de 50: " + b50 + " Billets de 20: " + b20 + " Billets de 10: " + b10 + " Billets de 5: " + b5 + " " + "Il reste: " + pmoney + " euro")
+					if (pmoney % 5 == 0) {
+						if (pmoney >= 500) {
+							var b500 = pmoney / 500;
+							pmoney = pmoney - (b500 * 500);
+						}
+						else {
+							b500 = 0;
+						}
+						if (pmoney >= 200) {
+							var b200 = pmoney / 200;
+							pmoney = pmoney - (b200 * 200);
+						}
+						else {
+							b200 = 0;
+						}
+						if (pmoney >= 100) {
+							var b100 = pmoney / 100;
+							pmoney = pmoney - (b100 * 100);
+						}
+						else {
+							b100 = 0;
+						}
+						if (pmoney >= 50) {
+							var b50 = pmoney / 50;
+							pmoney = pmoney - (b50 * 50);
+						}
+						else {
+							b50 = 0;
+						}
+						if (pmoney >= 20) {
+							var b20 = pmoney / 20;
+							pmoney = pmoney - (b20 * 20);
+						}
+						else {
+							b20 = 0;
+						}
+						if (pmoney >= 10) {
+							var b10 = pmoney / 10;
+							pmoney = pmoney - (b10 * 10);
+						}
+						else {
+							b10 = 0;
+						}
+						if (pmoney >= 5) {
+							var b5 = pmoney / 5;
+							pmoney = pmoney - (b5 * 5);
+						}
+						else {
+							b5 = 0;
+						}
+						document.write( " Billets de 500: " + b500 + "</br> Billets de 200: " + b200 + "</br> Billets de 100: " + b100 + "</br> Billets de 50: " + b50 + "</br> Billets de 20: " + b20 + "</br> Billets de 10: " + b10 + "</br> Billets de 5: " + b5);
 					}
 					else {
 						document.write("Cannot compute.");
